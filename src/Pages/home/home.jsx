@@ -5,12 +5,11 @@ import Pagemodal from "../page_modal/pageModal";
 import Footer from "../../components/footer/footer";
 import data from "../data/sems.json";
 import Navigationbar from "../navigationbar/navigationbar";
-import Social from "../social/social";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 function Home() {
   const [selectedSemester, setSelectedSemester] = useState("");
-  const [courseId, setCourseId] = useState(0);
+  
   const [selectedCourse, setSelectedCourse] = useState("");
   const [courseActive, setCourseActive] = useState(false);
 
@@ -116,6 +115,7 @@ function Home() {
       <Pagemodal
         sem={data[selectedCourse][selectedSemester]}
         heading={selectedCourse + "  -  " + selectedSemester}
+        course={selectedCourse}
       />
     </>
   );

@@ -10,6 +10,7 @@ function Pagemodal(props) {
   const [sub, setsub] = useState("");
   const [mod, setmod] = useState("");
   const [caller, callerUp] = useState(false);
+  const sem=props.sem;
   function close() {
     callerUp(false);
   }
@@ -34,7 +35,7 @@ function Pagemodal(props) {
                         {modules.map((module) => (
                           <li
                             className="mods"
-                            key={module}
+                            
                             onClick={() => {
                               setmod(module);
                               setsub(subject);
@@ -69,7 +70,7 @@ function Pagemodal(props) {
           </Row>
           <br></br>
           <Row>
-            {caller && <DocGetter module={mod} subject={sub} closer={close} />}
+            {caller && <DocGetter semester={sem} course={props.course} module={mod} subject={sub} closer={close} />}
           </Row>
         </Container>
       </section>
