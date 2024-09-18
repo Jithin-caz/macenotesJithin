@@ -5,6 +5,7 @@
 
 body{
     background: url('../bg.png');
+    background-attachment: fixed;
     font-family: 'Michroma', sans-serif;
 
 }
