@@ -71,7 +71,7 @@ else
   return (
     <div className="linkContainer">
       <div className="header">
-        <div className="texts">
+        <div className="texts ss">
           <h3>NOTES</h3>
         </div>
         <div onClick={props.closer} className="close-btn">
